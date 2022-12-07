@@ -34,7 +34,6 @@ const Login = ({ show, closeModal }) => {
       email: Yup.string()
         .email("Invalid email address")
         .required("Email address is required"),
-      // username: Yup.string().required('Username is required'),
       password: Yup.string()
         .min("8")
         .max("20 ")
@@ -46,7 +45,7 @@ const Login = ({ show, closeModal }) => {
       console.log(values);
       console.log(values.password);
       // let data = {...values}
-      axios.post('https://easyrent.onrender.com/users/login', values)
+      axios.post('https:easyrent.onrender.com/users/login', values)
       .then(res => {
         console.log(res.data)
         // setToken(res.data.token)
@@ -55,29 +54,12 @@ const Login = ({ show, closeModal }) => {
       console.log(values)
       onSubmitProps.resetForm()
     },
-    
-    //   axios.post('https://lgcoin.onrender.com/users/login', values)
-    //   .then(res => {
-    //     console.log(res.data)
-    //     // setToken(res.data.token)
-    //   })
-    //   .catch(err => console.log(err))
-    //   console.log(values)
-    //   onSubmitProps.resetForm()
-    // },
   });
   // console.log(formik.errors);
-  const config = {
-    headers: {
-      // Authorization: `Bearer ${token}`,
-      'Access-Control-Allow-Origin' : '*',
-      'Access-Control-Allow-Credentials':true,
-      'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-    },
-  };
-  
+
+
   const googleLoginHandler = () =>  {
-    axios.get('https://easyrent.onrender.com/users/auth/google', config)
+    axios.get('https://easyrent.onrender.com/users/auth/google')
     .then(res => console.log(res))
     .catch(err => console.log(err))
   }
@@ -95,7 +77,7 @@ const Login = ({ show, closeModal }) => {
 
 
   return (
-    <> 
+    <>
     <Overlay OverlayShow={show} overlayClick={closeModal}/>
     <div className="login-container" style={{transform: show ? 'translateY(0)':'translateY(-100vh)', opacity: show ? '1':'0'}}>
       <h3 className="login-heading">Login</h3>
@@ -169,7 +151,7 @@ const Login = ({ show, closeModal }) => {
       </form>
       <p className="login-account-paragraph">
         Don’t have an account yet?{" "}
-        <span className="login-signup">Sign Up</span>
+        <Link to={'SignUp'}><span className="login-signup">Sign Up</span></Link>
       </p>
       <p className="login-switch">Or Login with </p>
       <div className="login-social-logos">
