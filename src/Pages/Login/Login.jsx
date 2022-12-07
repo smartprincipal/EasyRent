@@ -34,7 +34,6 @@ const Login = ({ show, closeModal }) => {
       email: Yup.string()
         .email("Invalid email address")
         .required("Email address is required"),
-      // username: Yup.string().required('Username is required'),
       password: Yup.string()
         .min("8")
         .max("20 ")
@@ -55,26 +54,8 @@ const Login = ({ show, closeModal }) => {
       console.log(values)
       onSubmitProps.resetForm()
     },
-    
-    //   axios.post('https://lgcoin.onrender.com/users/login', values)
-    //   .then(res => {
-    //     console.log(res.data)
-    //     // setToken(res.data.token)
-    //   })
-    //   .catch(err => console.log(err))
-    //   console.log(values)
-    //   onSubmitProps.resetForm()
-    // },
   });
-  // console.log(formik.errors);
-  const config = {
-    headers: {
-      // Authorization: `Bearer ${token}`,
-      'Access-Control-Allow-Origin' : '*',
-      'Access-Control-Allow-Credentials':true,
-      'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-    },
-  };
+
   
   const googleLoginHandler = () =>  {
     axios.get('https://easyrent.onrender.com/users/auth/google', config)
