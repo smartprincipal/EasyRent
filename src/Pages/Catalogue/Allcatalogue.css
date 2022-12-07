@@ -56,6 +56,15 @@
     background-image: url('../../Assets/Victoria.png');   
 }
 
+.buttonStyle{
+    background-color: #FCBC0E;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    text-align: center;
+    margin: 0 auto !important;
+}
+
 @media screen and  (max-width: 970px){
     .cat-carddiv{
         padding: 0 2rem;

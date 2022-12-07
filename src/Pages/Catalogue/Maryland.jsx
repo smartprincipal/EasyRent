@@ -2,6 +2,7 @@ import React from 'react'
 import './Allcatalogue.css';
 import CatalogueCard from '../../Components/CatalogueCard/CatalogueCard';
 import CatalogueNavbar from '../../Components/CatalogueNavbar/CatalogueNavbar';
+import Button from '../../Components/Button/Button';
 import Overview from '../../Components/Overview/Overview';
 import Footer from '../../Components/Footer/Footer';
 
@@ -24,6 +25,7 @@ const Maryland = () => {
             <CatalogueCard location='Maryland' catcardmaindiv='catcardmaindiv5' cardtype='Suite 9 Bedroom'/>
             <CatalogueCard location='Maryland' catcardmaindiv='catcardmaindiv6' cardtype='Magnolia Height'/>
         </div>
+        <Button text='MORE' btnclass='buttonStyle'/>
         <div>
             <Overview heading='Maryland' />
         </div>
