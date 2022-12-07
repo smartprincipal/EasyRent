@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import facebook from '../../Assets/facebook.svg';
 import twitter from '../../Assets/twitter.svg';
 import google from '../../Assets/google.svg'
+import Overlay from '../../Components/Overlay/Overlay';
 
 
 function SignUp () {
@@ -69,7 +70,7 @@ function SignUp () {
 
     return (
 
-    <div className="login-form">
+    <div className="login-form" >
         <small className="success_note">
                 {Object.keys(inputErrors).length === 0 && isSubmit ?
                 <span className='success_note'>Sign up successfully</span> : null}
@@ -106,7 +107,7 @@ function SignUp () {
     
             <div className="input-wrap">
                 <label className="input_label" htmlFor="confirmedPassword">Confirm Password</label>
-                <input className="input_type" type="password" value={inputValues.confirmedPassword} onChange={handleChange} id="password" name="confirmedPassword" placeholder="Confirmed password..." />
+                <input className="input_type" type="password" value={inputValues.confirmedPassword} onChange={handleChange} id="confirmedPassword" name="confirmedPassword" placeholder="Confirmed password..." />
                 <small className="small_tag">{inputErrors.confirmedPassword}</small>
             </div>
             <button className="signButton">Sign Up</button>

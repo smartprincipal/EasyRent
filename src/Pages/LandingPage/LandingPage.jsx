@@ -26,6 +26,9 @@ import review4 from '../../Assets/review4.svg';
 import review5 from '../../Assets/review5.svg';
 import review6 from '../../Assets/review6.svg';
 import Footer from '../../Components/Footer/Footer';
+
+import { useNavigate } from 'react-router-dom';
+import SignUp from '../Signup/Signup';
 import Searchbar from '../../Components/Searchbar/Searchbar';
 
 
@@ -70,11 +73,11 @@ const Landingpage = () => {
     const loginClose = () => {
       setLoginModal(false)
     }
-
+    // let navigate = useNavigate();
     const LocationLoginAuth = () => {
       if(!token){
         setLoginModal(true)
-      }
+      } 
     }
 
    
@@ -85,13 +88,14 @@ const Landingpage = () => {
     <div className='landingPage'>
 
       <Login show={loginModal} closeModal={loginClose}/>
+
       
       {/* Hero section of the landing page */}
       <section className='hero'>
     
         {/* Navbar Component */}
           <div className='navcomponent'>
-              <NavBar loginClick={loginHandler}/>
+              <NavBar loginClick={loginHandler} />
           </div>
 
         {/* Hero Heading */}
