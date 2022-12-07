@@ -55,8 +55,6 @@ const Login = ({ show, closeModal }) => {
       onSubmitProps.resetForm()
     },
   });
-  // console.log(formik.errors);
-
 
   const googleLoginHandler = () =>  {
     axios.get('https://easyrent.onrender.com/users/auth/google')
