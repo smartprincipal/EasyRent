@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<Landingpage />} />
         <Route path="/Catalogue" element={<Catalogue />} />
         <Route path="/Signup" element={<SignUp />} />
-      </Routes> */}
+        <Route path="/Login" element={<Login />} />      </Routes> */}
       {/* <LeaseSubNav /> */}
       {/* <PaymentLeasePage /> */}
       {/* <PaymentHero />
@@ -26,8 +26,12 @@ function App() {
       {/* <Login /> */}
       {/* <Landingpage /> */}
       {/* <Catalogue/>  */}
-      {/* <SignUp /> */}
+      {/* <SignUp /> */} */}
       <PaymentPersonalInfo />
+      <Maryland />
+
+      {/* <CatalogueNavbar /> */}
+      {/* <CatalogueCard /> */}
 
     </div>
   );
