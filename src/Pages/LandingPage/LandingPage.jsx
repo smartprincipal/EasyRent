@@ -26,6 +26,8 @@ import review4 from '../../Assets/review4.svg';
 import review5 from '../../Assets/review5.svg';
 import review6 from '../../Assets/review6.svg';
 import Footer from '../../Components/Footer/Footer';
+import { useNavigate } from 'react-router-dom';
+import SignUp from '../Signup/Signup';
 import Searchbar from '../../Components/Searchbar/Searchbar';
 
 
@@ -98,13 +100,10 @@ const Landingpage = () => {
           <h1 className='heroheading'>Renting done right finally</h1>
         
         {/* Hero Input Container */}
-        <div>
-          <Searchbar searchdiv='inputdiv' imgsource={searchicon} searchinput='herosearch' />
-        </div>
-          {/* <div className='inputdiv'>
+          <div className='inputdiv'>
             <input type="search" name="search" id="herosearch" placeholder='Where do you want to live?.' />
             <img src={searchicon} alt="searchicon" className='searchicon'/>
-          </div> */}
+          </div>
 
         {/* Hero Caption */}
           <div className='captiondiv'>
@@ -134,7 +133,7 @@ const Landingpage = () => {
           <h4 className='section3heading'>Find homes that suit your style</h4>
 
           {/* Carousel Component */}
-          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs='false'>
+          <Carousel className='carousel' autoPlay='true' infiniteLoop='true' interval='3000' showThumbs={false}>
             <div className='carouseldiv1'>
               <p className='carouseltext'>3-Bedroom Flat</p>
               <div>
@@ -164,7 +163,7 @@ const Landingpage = () => {
         {/* Review Component */}
       <section className="section4">
             <h5 className="section4heading">Thousands of happy stories from our users</h5>
-          <Carousel className='reviewcarousel' autoPlay='true' infiniteLoop='true' interval='9000' showThumbs={false}>
+          <Carousel className='reviewcarousel' autoPlay='true' infiniteLoop='true' interval='8000' showThumbs={false}>
             <div className='review'>
               {myReview1.map((item, index) =>(
                 <Review heading={item.heading} img={item.img} key={index}/>))}   

@@ -26,7 +26,7 @@
     text-transform: capitalize;
 }
 
- .inputdiv{
+.inputdiv{
     border: 2px solid white;
     border-radius: 90px;
     display: flex;
@@ -41,9 +41,6 @@
     border: none;
     background-color: rgba(255, 255, 255, 0);
     flex: 80%;
-    color: white;
-    font-family: inherit;
-    font-weight: 500;
 }
 
 #herosearch:focus{
@@ -56,12 +53,16 @@
     font-weight: 500;
 }
 
+.searchicon{
+    width: 3rem;
+    cursor: pointer;
+}
+
 .captiondiv{
     background-color: black;
     width: 25rem;
-    margin-top: 9rem;
+    margin-top: 5rem;
 }
-
 
 .caption{
     color: white;
@@ -131,10 +132,6 @@
 
 .carouseldiv3{
     background-image: url('../../Assets/carousel1.svg');   
-}
-
-.carousel-status{
-    display: none;
 }
 
 .carouseldiv1, .carouseldiv2, .carouseldiv3{
